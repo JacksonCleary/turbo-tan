@@ -1,0 +1,134 @@
+.base {
+	display: inline-flex;
+	flex-shrink: 0;
+	align-items: center;
+	justify-content: center;
+	font-weight: 500;
+	white-space: nowrap;
+	cursor: pointer;
+	user-select: none;
+	outline: none;
+	border: 1px solid transparent;
+	border-radius: 0.375rem;
+	transition: all 150ms ease-in-out;
+}
+
+.base:disabled {
+	pointer-events: none;
+	opacity: 0.5;
+}
+
+.base:focus-visible {
+	outline: 2px solid #3b82f6;
+	outline-offset: 2px;
+}
+
+/* Size variants */
+.sizeDefault {
+	gap: 0.375rem;
+	padding: var(--space-md);
+}
+
+.sizeLg {
+	gap: 0.375rem;
+	padding: var(--space-lg);
+}
+
+.sizeSm {
+	gap: 0.25rem;
+	padding: var(--space-sm);
+	border-radius: 0.5rem;
+}
+
+.sizeXs {
+	gap: 0.25rem;
+	padding: var(--space-xs);
+	border-radius: 0.5rem;
+}
+
+.sizeIcon {
+	width: var(--space-md);
+	height: var(--space-md);
+	padding: 0;
+}
+
+.sizeIconLg {
+	width: var(--space-lg);
+	height: var(--space-lg);
+	padding: 0;
+}
+
+.sizeIconSm {
+	width: var(--space-sm);
+	height: var(--space-sm);
+	padding: 0;
+	border-radius: 0.5rem;
+}
+
+.sizeIconXs {
+	width: var(--space-xs);
+	height: var(--space-xs);
+	padding: 0;
+	border-radius: 0.5rem;
+}
+
+/* Variant styles */
+.variantDefault {
+	color: oklch(20.322% 0.00457 348.16);
+	background-color: oklch(75.037% 0.06016 182.3);
+}
+
+.variantDefault:hover {
+	color: oklch(87.8% 0.02693 126.77);
+	background-color: #27272a;
+}
+
+.variantDestructive {
+	color: #ef4444;
+	background-color: rgba(239, 68, 68, 0.1);
+}
+
+.variantDestructive:hover {
+	background-color: rgba(239, 68, 68, 0.2);
+}
+
+.variantGhost {
+	color: oklch(87.8% 0.02693 126.77);
+	background-color: transparent;
+}
+
+.variantGhost:hover {
+	color: #18181b;
+	background-color: oklch(87.8% 0.02693 126.77);
+}
+
+.variantLink {
+	color: #3b82f6;
+	text-decoration: underline;
+	text-underline-offset: 4px;
+	background-color: transparent;
+}
+
+.variantLink:hover {
+	text-decoration: none;
+}
+
+.variantOutline {
+	background-color: oklch(94.182% 0.01032 98.998);
+	border: 1px solid #e4e4e7;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.variantOutline:hover {
+	color: #18181b;
+	background-color: oklch(87.8% 0.02693 126.77);
+}
+
+.variantSecondary {
+	color: #18181b;
+	background-color: oklch(87.8% 0.02693 126.77);
+}
+
+.variantSecondary:hover {
+	background-color: oklch(94.182% 0.01032 98.998);
+}

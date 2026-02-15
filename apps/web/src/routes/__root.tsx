@@ -1,5 +1,5 @@
 /// <reference types="vite/client" />
-import appCss from "@repo/config-tailwind/base?url";
+import "../styles/globals.css";
 import {
 	createRootRoute,
 	HeadContent,
@@ -11,7 +11,6 @@ import type { ReactNode } from "react";
 export const Route = createRootRoute({
 	component: RootComponent,
 	head: () => ({
-		links: [{ href: appCss, rel: "stylesheet" }],
 		meta: [
 			{
 				charSet: "utf-8",

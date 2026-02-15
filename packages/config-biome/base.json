@@ -13,9 +13,7 @@
 		"enabled": true
 	},
 	"css": {
-		"parser": {
-			"tailwindDirectives": true
-		}
+		"parser": {}
 	},
 	"formatter": {
 		"enabled": true,

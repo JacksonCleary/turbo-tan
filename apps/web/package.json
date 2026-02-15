@@ -1,16 +1,16 @@
 {
 	"$schema": "https://www.schemastore.org/package.json",
 	"dependencies": {
+		"@repo/db": "workspace:*",
 		"@repo/ui": "workspace:*",
+		"@repo/validation": "workspace:*",
 		"@tanstack/react-router": "1.150.0",
 		"@tanstack/react-start": "1.150.0",
 		"react": "19.2.3",
 		"react-dom": "19.2.3"
 	},
 	"devDependencies": {
-		"@repo/config-tailwind": "workspace:*",
 		"@repo/config-typescript": "workspace:*",
-		"@tailwindcss/vite": "4.1.18",
 		"@types/node": "25.0.9",
 		"@types/react": "19.2.8",
 		"@types/react-dom": "19.2.3",

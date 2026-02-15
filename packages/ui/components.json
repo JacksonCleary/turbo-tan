@@ -13,12 +13,5 @@
 	"registries": {},
 	"rsc": false,
 	"style": "base-vega",
-	"tailwind": {
-		"baseColor": "neutral",
-		"config": "",
-		"css": "../config-tailwind/base.css",
-		"cssVariables": true,
-		"prefix": ""
-	},
 	"tsx": true
 }

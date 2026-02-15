@@ -1,3 +1,4 @@
+import { Hero } from "@repo/ui/components/Hero";
 import { createFileRoute } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/")({
@@ -5,5 +6,5 @@ export const Route = createFileRoute("/")({
 });
 
 function Home() {
-	return <div className="bg-black p-4 text-white">Home</div>;
+	return <Hero />;
 }

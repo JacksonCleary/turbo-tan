@@ -1,4 +1,16 @@
 {
 	"$schema": "https://biomejs.dev/schemas/2.3.11/schema.json",
-	"extends": ["@repo/config-biome/base"]
+	"extends": ["@repo/config-biome/base"],
+	"overrides": [
+		{
+			"includes": ["**/*.css"],
+			"linter": {
+				"rules": {
+					"complexity": {
+						"noImportantStyles": "off"
+					}
+				}
+			}
+		}
+	]
 }

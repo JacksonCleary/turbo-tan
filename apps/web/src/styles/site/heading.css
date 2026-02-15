@@ -1,0 +1,40 @@
+/* Heading */
+
+h1,
+h2,
+h3 {
+	margin-block-end: var(--space-lg);
+	line-height: 1;
+}
+
+h1,
+.is-h1 {
+	font-size: var(--h1-font-size);
+}
+
+h2,
+.is-h2 {
+	font-size: var(--h2-font-size);
+}
+
+h3,
+.is-h3 {
+	font-size: var(--h3-font-size);
+}
+
+h4,
+.is-h4 {
+	font-size: var(--h4-font-size);
+}
+
+h5,
+.is-h5 {
+	font-size: var(--h5-font-size);
+}
+
+h6,
+.is-h6 {
+	font-size: var(--h6-font-size);
+}
+
+/* remaining heading styles go here */

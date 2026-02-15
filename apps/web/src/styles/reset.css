@@ -1,0 +1,236 @@
+/* https://frontendmasters.com/blog/the-coyier-css-starter/ */
+@layer reset {
+	html {
+		color-scheme: light dark;
+		font:
+			clamp(1rem, 1rem + 0.5vw, 2rem) / 1.4 system-ui,
+			sans-serif;
+		tab-size: 2;
+		hanging-punctuation: first allow-end last;
+		word-break: break-word;
+	}
+
+	body {
+		padding: 0;
+		margin: 0;
+	}
+
+	*,
+	*::before,
+	*::after {
+		box-sizing: border-box;
+		padding: 0;
+		margin: 0;
+	}
+
+	h1,
+	h2 {
+		font-weight: 900;
+		letter-spacing: -0.02rem;
+	}
+	h1,
+	h2,
+	h3 {
+		line-height: 1.1;
+	}
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 /* FUTURE :heading */ {
+		margin-block-start: 0;
+		text-wrap: balance;
+	}
+
+	p,
+	li,
+	dd {
+		max-inline-size: 88ch;
+		text-wrap: pretty;
+	}
+
+	a {
+		color: oklch(0.68 0.17 228);
+		text-underline-offset: 2px;
+		&:not(:is(:hover, :focus)) {
+			text-decoration-color: color-mix(in srgb, currentColor, transparent 50%);
+		}
+	}
+
+	sub,
+	sup {
+		position: relative;
+		font-size: 75%;
+		line-height: 0;
+		vertical-align: baseline;
+	}
+	sub {
+		inset-block-end: -0.25em;
+	}
+	sup {
+		inset-block-start: -0.5em;
+	}
+
+	ul,
+	ol,
+	dl {
+		padding: 0;
+		margin: 0;
+		list-style-position: inside;
+		ul,
+		ol,
+		dl {
+			padding-inline-start: 2ch;
+		}
+	}
+
+	img,
+	video,
+	iframe {
+		display: block;
+		max-inline-size: 100%;
+		block-size: auto;
+		border-style: none;
+	}
+
+	figure {
+		inline-size: fit-content;
+		margin-inline: auto;
+	}
+	figcaption {
+		contain: inline-size;
+		font-size: 90%;
+	}
+
+	input,
+	select,
+	textarea,
+	button {
+		font: inherit;
+		/* FUTURE: appearance: base; */
+	}
+	label {
+		display: block;
+	}
+	input:not(
+			:where(
+					[type="submit"],
+					[type="checkbox"],
+					[type="radio"],
+					[type="button"],
+					[type="reset"]
+				)
+		) {
+		inline-size: 100%;
+	}
+	button,
+	input:where([type="submit"], [type="reset"], [type="button"]) {
+		color: Canvas;
+		background: CanvasText;
+		border: 1px solid transparent;
+	}
+	textarea {
+		field-sizing: content;
+		min-block-size: 5lh;
+		inline-size: 100%;
+		max-inline-size: 100%;
+	}
+
+	pre,
+	code,
+	kbd,
+	samp {
+		font-family: ui-monospace, SFMono-Regular, monospace;
+	}
+	pre {
+		padding: 1.5rem;
+		color: Canvas;
+		white-space: pre-wrap;
+		background: CanvasText;
+	}
+
+	svg:not(.icon, .lucide) {
+		fill: currentColor;
+	}
+
+	[aria-disabled="true" i],
+	[disabled] {
+		cursor: not-allowed;
+	}
+	[disabled],
+	label:has(input[disabled]) {
+		opacity: 0.5;
+
+		[disabled] {
+			opacity: 1;
+		}
+	}
+
+	hr {
+		height: 0;
+		margin-block: 2.5rem;
+		overflow: visible;
+		color: var(--color-current-accent);
+		border-style: dashed;
+		border-width: 1px 0 0;
+
+		&.no-margin {
+			margin-block: 0;
+		}
+	}
+
+	:target {
+		scroll-margin: 3rlh;
+	}
+
+	table {
+		caption-side: bottom;
+		border-collapse: collapse;
+		td {
+			font-size: 90%;
+		}
+		td,
+		th {
+			padding: 0.5rem;
+			word-break: normal;
+			border: 1px solid gray;
+		}
+	}
+	[role="region"][aria-labelledby][tabindex] {
+		overflow: auto;
+	}
+	caption {
+		font-size: 90%;
+	}
+
+	[hidden] {
+		display: none !important;
+	}
+	.screenreader-only:not(:focus):not(:active) {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		overflow: hidden;
+		white-space: nowrap;
+		clip: rect(0 0 0 0);
+		clip-path: inset(50%);
+	}
+	:focus-visible {
+		outline-offset: 2px;
+	}
+
+	@media (prefers-reduced-motion: no-preference) {
+		@view-transition {
+			navigation: auto;
+		}
+
+		html {
+			scroll-behavior: smooth;
+			interpolate-size: allow-keywords;
+			&:focus-within {
+				/* scroll-behavior: smooth; */
+			}
+		}
+	}
+}

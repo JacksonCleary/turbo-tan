@@ -3,3 +3,13 @@ node_modules
 coverage
 dist
 .tanstack
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+*.log
+*.tsbuildinfo
+.idea
+.vscode
+.DS_Store

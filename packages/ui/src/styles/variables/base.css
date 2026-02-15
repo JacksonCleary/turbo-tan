@@ -1,0 +1,22 @@
+/* base CSS variables */
+:root {
+	/* Base screen size */
+	--base-screen-min-width: 30; /* ex: default of 300px */
+	--base-screen-max-width: 120; /* ex: default of 1200px */
+
+	/* Base font size */
+	--base-font-size: 62.5%; /* 1rem = 10px */
+	--rem-to-px: 10; /* Conversion factor for reference */
+
+	/* Viewport settings */
+	--viewport-min: 30rem; /* 300px minimum viewport */
+	--viewport-max: 120rem; /* 1200px maximum viewport */
+	--viewport-range: 90rem; /* 1200px - 300px = 900px */
+
+	--max-screen-size: 168rem; /* 1680px maximum screen size */
+}
+
+/* Apply base font size to set 1rem = 10px */
+html {
+	font-size: var(--base-font-size);
+}

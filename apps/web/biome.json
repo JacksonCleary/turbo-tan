@@ -18,6 +18,10 @@
 			"includes": ["./src/routes/**/*.tsx"],
 			"linter": {
 				"rules": {
+					"complexity": {
+						"noImportantStyles": "off",
+						"useLiteralKeys": "off"
+					},
 					"style": {
 						"useComponentExportOnlyModules": "off"
 					}

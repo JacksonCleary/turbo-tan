@@ -1,0 +1,20 @@
+{
+	"$schema": "https://www.schemastore.org/package.json",
+	"dependencies": {
+		"zod": "4.3.6"
+	},
+	"devDependencies": {
+		"@repo/config-typescript": "workspace:*",
+		"typescript": "5.9.3"
+	},
+	"exports": {
+		".": "./src/index.ts"
+	},
+	"name": "@repo/validation",
+	"private": true,
+	"scripts": {
+		"check-types": "tsc --noEmit"
+	},
+	"type": "module",
+	"version": "0.0.0"
+}

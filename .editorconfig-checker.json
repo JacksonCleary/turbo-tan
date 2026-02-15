@@ -10,12 +10,12 @@
 		"MaxLineLength": false,
 		"TrimTrailingWhitespace": false
 	},
-	"Exclude": ["bun.lock", "routeTree.gen.ts"],
+	"Exclude": ["bun.lock", "routeTree.gen.ts", ".github", "README.md"],
 	"Format": "",
 	"IgnoreDefaults": false,
 	"NoColor": false,
 	"PassedFiles": [],
 	"SpacesAfterTabs": false,
 	"Verbose": false,
-	"Version": "v3.6.0"
+	"Version": "v3.6.1"
 }

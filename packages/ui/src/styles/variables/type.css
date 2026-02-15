@@ -1,0 +1,117 @@
+:root {
+	/* =====  FONT SCALING  ===== */
+
+	/* Select the min and max screen sizes you are working with */
+
+	/* Default sizes assume a font-size of 62.5% */
+	/* This renders REMs at 10px instead of 16px */
+
+	--screen-min-width: var(
+		--base-screen-min-width,
+		30
+	); /* ex: default of 300px */
+	--screen-max-width: var(
+		--base-screen-max-width,
+		120
+	); /* ex: default of 1200px */
+
+	/* Select the min and max font-sizes for each header type */
+
+	--h1-min-size: 5; /* ex: 50px */
+	--h1-max-size: 10; /* ex: 100px */
+
+	--h2-min-size: 2.8; /* ex: 28px */
+	--h2-max-size: 6; /* ex: 60px */
+
+	--h3-min-size: 2.1; /* ex: 21px */
+	--h3-max-size: 4.8; /* ex: 48px */
+
+	--h4-min-size: 1.6; /* ex: 16px */
+	--h4-max-size: 3.2; /* ex: 32px */
+
+	--h5-size: 1.4rem; /* ex: 14px */
+	--h6-size: 1.2rem; /* ex: 12px */
+
+	/* font size for paragraph */
+	--body-min-size: 1.6; /* ex: 16px */
+	--body-max-size: 1.8; /* ex: 18px */
+
+	/* FONT SCALING CALCULATIONS - DON'T NEED TO EDIT */
+	--h1-slope: calc(
+		(var(--h1-max-size) - var(--h1-min-size)) /
+		(var(--screen-max-width) - var(--screen-min-width))
+	);
+	--h2-slope: calc(
+		(var(--h2-max-size) - var(--h2-min-size)) /
+		(var(--screen-max-width) - var(--screen-min-width))
+	);
+	--h3-slope: calc(
+		(var(--h3-max-size) - var(--h3-min-size)) /
+		(var(--screen-max-width) - var(--screen-min-width))
+	);
+	--h4-slope: calc(
+		(var(--h4-max-size) - var(--h4-min-size)) /
+		(var(--screen-max-width) - var(--screen-min-width))
+	);
+
+	--body-slope: calc(
+		(var(--body-max-size) - var(--body-min-size)) /
+		(var(--screen-max-width) - var(--screen-min-width))
+	);
+
+	--h1-intersection: calc(
+		(-1 * var(--screen-min-width) * var(--h1-slope)) +
+		var(--h1-min-size)
+	);
+	--h2-intersection: calc(
+		(-1 * var(--screen-min-width) * var(--h2-slope)) +
+		var(--h2-min-size)
+	);
+	--h3-intersection: calc(
+		(-1 * var(--screen-min-width) * var(--h3-slope)) +
+		var(--h3-min-size)
+	);
+	--h4-intersection: calc(
+		(-1 * var(--screen-min-width) * var(--h4-slope)) +
+		var(--h4-min-size)
+	);
+
+	--p-intersection: calc(
+		(-1 * var(--screen-min-width) * var(--body-slope)) +
+		var(--body-min-size)
+	);
+
+	--h1-preferred: calc(var(--h1-intersection) + (var(--h1-slope) * 100));
+	--h2-preferred: calc(var(--h2-intersection) + (var(--h2-slope) * 100));
+	--h3-preferred: calc(var(--h3-intersection) + (var(--h3-slope) * 100));
+	--h4-preferred: calc(var(--h4-intersection) + (var(--h4-slope) * 100));
+	--body-preferred: calc(var(--p-intersection) + (var(--body-slope) * 100));
+
+	--h1-min: calc(var(--h1-min-size) * 1rem);
+	--h1-mid: calc(var(--h1-preferred) * 1vw);
+	--h1-max: calc(var(--h1-max-size) * 1rem);
+
+	--h2-min: calc(var(--h2-min-size) * 1rem);
+	--h2-mid: calc(var(--h2-preferred) * 1vw);
+	--h2-max: calc(var(--h2-max-size) * 1rem);
+
+	--h3-min: calc(var(--h3-min-size) * 1rem);
+	--h3-mid: calc(var(--h3-preferred) * 1vw);
+	--h3-max: calc(var(--h3-max-size) * 1rem);
+
+	--h4-min: calc(var(--h4-min-size) * 1rem);
+	--h4-mid: calc(var(--h4-preferred) * 1vw);
+	--h4-max: calc(var(--h4-max-size) * 1rem);
+
+	--body-min: calc(var(--body-min-size) * 1rem);
+	--body-mid: calc(var(--body-preferred) * 1vw);
+	--body-max: calc(var(--body-max-size) * 1rem);
+
+	--h1-font-size: clamp(var(--h1-min), var(--h1-mid), var(--h1-max));
+	--h2-font-size: clamp(var(--h2-min), var(--h2-mid), var(--h2-max));
+	--h3-font-size: clamp(var(--h3-min), var(--h3-mid), var(--h3-max));
+	--h4-font-size: clamp(var(--h4-min), var(--h4-mid), var(--h4-max));
+	--h5-font-size: var(--h5-size);
+	--h6-font-size: var(--h6-size);
+	--p-font-size: clamp(var(--body-min), var(--body-mid), var(--body-max));
+}

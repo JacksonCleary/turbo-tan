@@ -5,8 +5,7 @@
 		"class-variance-authority": "0.7.1",
 		"clsx": "2.1.1",
 		"lucide-react": "0.562.0",
-		"react": "19.2.3",
-		"tailwind-merge": "3.4.0"
+		"react": "19.2.3"
 	},
 	"devDependencies": {
 		"@repo/config-typescript": "workspace:*",
@@ -14,8 +13,9 @@
 		"typescript": "5.9.3"
 	},
 	"exports": {
-		"./components/*": "./src/components/*.tsx",
-		"./lib/*": "./src/lib/*.ts"
+		"./components/*": "./src/components/*/index.ts",
+		"./lib/*": "./src/lib/*.ts",
+		"./styles/*": "./src/styles/*"
 	},
 	"name": "@repo/ui",
 	"private": true,

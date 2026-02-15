@@ -1,0 +1,80 @@
+/* Spacing variables */
+:root {
+	/* =====  SPACING SCALE  ===== */
+
+	/* Min values (mobile - 300px viewport) */
+	--space-2xs-min: 0.2rem; /* 2px */
+	--space-xs-min: 0.4rem; /* 4px */
+	--space-sm-min: 0.6rem; /* 6px */
+	--space-md-min: 1.2rem; /* 12px */
+	--space-lg-min: 1.6rem; /* 16px */
+	--space-xl-min: 2.4rem; /* 24px */
+	--space-2xl-min: 3.2rem; /* 32px */
+
+	/* Max values (desktop - 1200px viewport) */
+	--space-2xs-max: 0.4rem; /* 4px */
+	--space-xs-max: 0.8rem; /* 8px */
+	--space-sm-max: 1.2rem; /* 12px */
+	--space-md-max: 2rem; /* 20px */
+	--space-lg-max: 3.2rem; /* 32px */
+	--space-xl-max: 4.8rem; /* 48px */
+	--space-2xl-max: 6.4rem; /* 64px */
+
+	/* Fluid spacing using clamp (viewport-min to viewport-max) */
+	--space-2xs: clamp(
+		var(--space-2xs-min),
+		calc(
+			var(--space-2xs-min) +
+			(0.2rem * ((100vw - var(--viewport-min)) / var(--viewport-range)))
+		),
+		var(--space-2xs-max)
+	);
+	--space-xs: clamp(
+		var(--space-xs-min),
+		calc(
+			var(--space-xs-min) +
+			(0.4rem * ((100vw - var(--viewport-min)) / var(--viewport-range)))
+		),
+		var(--space-xs-max)
+	);
+	--space-sm: clamp(
+		var(--space-sm-min),
+		calc(
+			var(--space-sm-min) +
+			(0.6rem * ((100vw - var(--viewport-min)) / var(--viewport-range)))
+		),
+		var(--space-sm-max)
+	);
+	--space-md: clamp(
+		var(--space-md-min),
+		calc(
+			var(--space-md-min) +
+			(0.8rem * ((100vw - var(--viewport-min)) / var(--viewport-range)))
+		),
+		var(--space-md-max)
+	);
+	--space-lg: clamp(
+		var(--space-lg-min),
+		calc(
+			var(--space-lg-min) +
+			(1.6rem * ((100vw - var(--viewport-min)) / var(--viewport-range)))
+		),
+		var(--space-lg-max)
+	);
+	--space-xl: clamp(
+		var(--space-xl-min),
+		calc(
+			var(--space-xl-min) +
+			(2.4rem * ((100vw - var(--viewport-min)) / var(--viewport-range)))
+		),
+		var(--space-xl-max)
+	);
+	--space-2xl: clamp(
+		var(--space-2xl-min),
+		calc(
+			var(--space-2xl-min) +
+			(3.2rem * ((100vw - var(--viewport-min)) / var(--viewport-range)))
+		),
+		var(--space-2xl-max)
+	);
+}
