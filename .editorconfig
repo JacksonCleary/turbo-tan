@@ -15,3 +15,4 @@ indent_style = space
 
 [*.tsx]
 max_line_length = off
+

@@ -13,3 +13,5 @@ dist
 .idea
 .vscode
 .DS_Store
+*.code-workspace
+openspec/

@@ -5,17 +5,18 @@
 			{
 				"name": "commitlint",
 				"run": "bun commitlint --edit {1}"
-			},
-			{
-				"name": "spell-check",
-				"run": "bun cspell --no-summary --no-progress --language-id $1"
 			}
 		],
-		"parallel": true
+		"parallel": false
 	},
 	"output": ["success", "failure"],
 	"pre-commit": {
 		"jobs": [
+			{
+				"name": "lint",
+				"run": "bun lint --write",
+				"stage_fixed": true
+			},
 			{
 				"name": "check-types",
 				"run": "bun run check-types"
@@ -23,11 +24,6 @@
 			{
 				"name": "editorconfig-checker",
 				"run": "bun editorconfig-checker"
-			},
-			{
-				"name": "lint",
-				"run": "bun lint --write",
-				"stage_fixed": true
 			},
 			{
 				"name": "spell-check",
@@ -46,15 +42,19 @@
 				"run": "bun validate-branch-name"
 			}
 		],
-		"parallel": true
+		"parallel": false
 	},
 	"pre-push": {
 		"jobs": [
 			{
-				"name": "audit",
-				"run": "bun audit"
+				"name": "build-affected",
+				"run": "bun run build --filter=..."
+			},
+			{
+				"name": "test-affected",
+				"run": "bun run test --filter=..."
 			}
 		],
-		"parallel": true
+		"parallel": false
 	}
 }

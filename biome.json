@@ -3,6 +3,16 @@
 	"extends": ["@repo/config-biome/base"],
 	"overrides": [
 		{
+			"includes": ["**/*.*"],
+			"linter": {
+				"rules": {
+					"complexity": {
+						"useLiteralKeys": "off"
+					}
+				}
+			}
+		},
+		{
 			"includes": ["**/*.css"],
 			"linter": {
 				"rules": {

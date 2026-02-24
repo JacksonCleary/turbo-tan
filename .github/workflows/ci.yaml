@@ -1,3 +1,16 @@
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6
+
+      - name: Install Dependencies
+        uses: ./.github/workflows/actions/install-dependencies
+
+      - name: Audit dependencies (fail on High/Critical)
+        run: |
+          bun audit --severity high --severity critical || exit 1
+
 name: CI
 
 permissions:
@@ -84,17 +97,7 @@ jobs:
       - name: Lint
         run: bun lint
 
-  spell-check:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6
 
-      - name: Install Dependencies
-        uses: ./.github/workflows/actions/install-dependencies
-
-      - name: Check Spelling
-        run: bun cspell .
 
   syncpack:
     runs-on: ubuntu-latest
