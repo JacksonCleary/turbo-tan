@@ -10,7 +10,19 @@
 		"MaxLineLength": false,
 		"TrimTrailingWhitespace": false
 	},
-	"Exclude": ["bun.lock", "routeTree.gen.ts", ".github", "README.md"],
+	"Exclude": [
+		"bun.lock",
+		"routeTree.gen.ts",
+		".github",
+		"README.md",
+		"openspec",
+		"bunfig.toml",
+		".editorconfig",
+		".env-example",
+		".gitignore",
+		".tool-versions",
+		"readme.md"
+	],
 	"Format": "",
 	"IgnoreDefaults": false,
 	"NoColor": false,

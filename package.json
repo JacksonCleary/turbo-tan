@@ -32,14 +32,27 @@
 	"private": true,
 	"scripts": {
 		"build": "turbo build",
+		"build-db": "turbo run build --filter=@repo/db",
+		"build-ui": "turbo run build --filter=@repo/ui",
+		"build-validation": "turbo run build --filter=@repo/validation",
+		"build-web": "turbo run build --filter=@repo/web",
 		"check-types": "turbo check-types",
+		"check-types-db": "turbo run check-types --filter=@repo/db",
+		"check-types-ui": "turbo run check-types --filter=@repo/ui",
+		"check-types-validation": "turbo run check-types --filter=@repo/validation",
+		"check-types-web": "turbo run check-types --filter=@repo/web",
 		"clean": "rimraf .tanstack .turbo dist node_modules",
 		"coverage": "vitest run --coverage",
 		"dev": "turbo dev",
 		"lint": "biome check --error-on-warnings",
+		"lint:changed": "biome check --error-on-warnings $(git diff --name-only --cached)",
 		"preinstall": "only-allow bun",
 		"prepare": "lefthook install",
-		"test": "vitest"
+		"test": "vitest --run",
+		"test:db": "turbo run test --filter=@repo/db -- --run",
+		"test:ui": "turbo run test --filter=@repo/ui -- --run",
+		"test:validation": "turbo run test --filter=@repo/validation -- --run",
+		"test:web": "turbo run test --filter=@repo/web -- --run"
 	},
 	"type": "module",
 	"workspaces": [
