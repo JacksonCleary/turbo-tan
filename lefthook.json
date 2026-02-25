@@ -48,11 +48,11 @@
 		"jobs": [
 			{
 				"name": "build-affected",
-				"run": "bun run build --filter=..."
+				"run": "bun run build"
 			},
 			{
 				"name": "test-affected",
-				"run": "bun run test --filter=..."
+				"run": "bun run test"
 			}
 		],
 		"parallel": false
